@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-wrapper {
+    max-width: 1600px;
+    margin: auto;
+
+    .product-wrapper {
+        background-image: url('/src/assets/images/product/back.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+// Utils
+@import "./utils/_colors";
+@import "./utils/_mixins";
+@import "./utils/_responsive_mixins";
+
+// Base
+@import "./base/_fonts";
+@import "./base/_typography";
+
+// Components
+@import "./components/_navbar";
+@import "./components/_footer";
+
+// Pages
+@import "./pages/_product";

@@ -1,0 +1,86 @@
+.navbar-wrapper {
+    .navbar {
+        position: relative;
+        background-image: url('/src/assets/images/navbar/navbar-layer.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 198px;
+
+        .navbar__menu-mobile {
+            display: none;
+            position: relative;
+
+            @include phone-only {
+                display: block;
+            }
+
+            .navbar__menu-search {
+                @include flex('flex', 'space-between');
+                padding: 15px;
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                right: 0;
+                left: 0;
+                margin: 0 18px;
+                padding: 14px;
+                z-index: 1;
+                border-radius: 4px;
+                background: #000000f5;
+
+                a {
+                    display: block;
+                    @extend .oswald_light_26;
+                    text-decoration: none;
+                    color: $light;
+                }
+            }
+        }
+
+        .navbar__menu {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #0000009c;
+
+            .navbar__mobile-title {
+                @extend .oswald_light_26;
+                text-decoration: none;
+                color: $light;
+                text-align: center;
+                margin: 8px 0;
+                display: none;
+
+                @include phone-only {
+                    display: block;
+                }
+            }
+
+            ul {
+                max-width: 1170px;
+                margin: auto;
+                padding: 11px 0;
+                @include flex('center', 'space-evenly');
+
+                @include phone-only {
+                    display: none
+                }
+
+                a {
+                    @extend .oswald_light_26;
+                    text-decoration: none;
+                    color: $light;
+                }
+
+            }
+        }
+    }
+}

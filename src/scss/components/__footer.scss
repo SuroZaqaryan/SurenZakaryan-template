@@ -1,0 +1,154 @@
+.footer {
+    background-color: #0c0c0c;
+
+    .footer__overlay {
+        background-color: $black;
+
+        .footer__network {
+            max-width: 1170px;
+            margin: auto;
+            @include flex('flex', 'space-between');
+            padding: 26px 20px;
+            gap: 40px;
+
+            @include tablets {
+                flex-wrap: wrap;
+            }
+
+            .footer__network-icons {
+                flex-basis: 710px;
+                @include flex('flex', 'space-between');
+
+                img {
+                    cursor: pointer;
+                    transition: 0.4s;
+
+                    &:hover {
+                        filter: invert(1) sepia(1) saturate(1) hue-rotate(175deg);
+                    }
+
+                    @include phone-only {
+                        width: 30px;
+                    }
+                }
+            }
+
+            .footer__copyright {
+                @include flex('flex');
+                cursor: context-menu;
+
+                @include phone-only {
+                    display: none;
+                }
+
+                p {
+                    @extend .oswald_light_32;
+                    letter-spacing: -0.8px;
+                    color: #444444;
+                }
+            }
+        }
+    }
+
+
+    .footer__info {
+        @include flex('flex', 'space-between');
+        margin: auto;
+        max-width: 1170px;
+        padding: 27px 47px;
+        gap: 40px;
+
+        @include tablets {
+            flex-wrap: wrap;
+        }
+
+        .footer__cols {
+            @include flex('flex', 'space-between');
+            flex-basis: 660px;
+            gap: 30px;
+
+            @include phone-only {
+                flex-wrap: wrap;
+
+                .footer__col {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+            }
+
+            p {
+                @extend .oswald_light_26;
+                color: #444444;
+                letter-spacing: -0.65px;
+                cursor: context-menu;
+            }
+
+            ul {
+                margin-top: 25px;
+
+                li {
+                    list-style-type: none;
+                    margin-bottom: 8px;
+
+                    a {
+                        @extend .oswald_light_16;
+                        color: #bbbbbb;
+
+                        &:hover {
+                            color: #dfdfdf;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__browsers {
+            flex-basis: 265px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+            @include phone-only {
+                flex-basis: 100%;
+
+                .footer__browsers-info {
+                    max-width: 265px;
+                    margin: auto;
+                }
+            }
+
+            .footer__browsers-info {
+                .footer__browsers-icons {
+                    @include flex('flex', 'flex-end');
+                    margin-bottom: 21px;
+
+                    @include tablets {
+                        @include flex('flex', 'flex-start');
+                    }
+
+                    @include phone-only {
+                        @include flex('flex', 'center');
+                    }
+                }
+
+                p {
+                    text-align: right;
+                    color: #5c5c5c;
+                    letter-spacing: -0.35px;
+                    @extend .arial_regular_14;
+
+                    @include tablets {
+                        text-align: left;
+                    }
+
+                    @include phone-only {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+
+    }
+}

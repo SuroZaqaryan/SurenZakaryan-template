@@ -1,0 +1,352 @@
+main {
+    max-width: 1170px;
+    margin: auto;
+    @include flex('flex', 'space-between');
+    padding: 40px 48px;
+    background-color: $light;
+
+    @include tablets {
+        flex-wrap: wrap;
+    }
+
+    @include phone-only {
+        padding: 40px 30px;
+    }
+
+    input {
+        outline: none;
+    }
+
+    .product {
+        flex-basis: 686px;
+        height: 100%;
+        margin-right: 48px;
+
+        @include tablets {
+            margin-right: 0;
+        }
+
+        .product__title {
+            @include flex('flex', 'space-between', 'wrap');
+            margin-bottom: 26px;
+            gap: 20px;
+
+            @include phone-only {
+                display: none;
+            }
+
+            h1 {
+                @extend .oswald_light_34;
+                color: #121212;
+            }
+
+            .product__search {
+                position: relative;
+                height: fit-content;
+
+                input {
+                    width: 254px;
+                    max-width: 100%;
+                    padding: 15px 13px;
+                    border: 1px solid #a3a3a3;
+
+                    &::placeholder {
+                        @extend .arial_regular_14;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        color: #a3a3a3;
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    top: 49%;
+                    right: 13px;
+                    transform: translateY(-50%);
+                }
+            }
+
+        }
+
+        .product__subtitle {
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: -25px;
+                transform: translateY(-50%);
+            }
+
+            p {
+                @extend .oswald_light_26;
+            }
+        }
+
+        .product__products {
+            display: grid;
+            gap: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            grid-column-gap: 15px;
+            grid-row-gap: 30px;
+            justify-content: center;
+            margin-top: 33px;
+
+            @include phone-only-small {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            }
+
+            .product__merchandise {
+                max-width: 120px;
+
+                @include phone-only {
+                    max-width: 100%;
+                }
+
+                .product__image {
+                    @include flex('', 'center');
+                    margin-bottom: 11px;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .product__info {
+                    position: relative;
+                    text-align: center;
+
+                    small {
+                        @extend .arial_regular_11;
+                    }
+
+                    >p {
+                        margin: 5px 0;
+                        @extend .oswald_light_18;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                    button {
+                        max-width: 80px;
+                        padding: 11px 25px;
+                        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 1px 2px #ffffff;
+                        border: 1px solid #dbdbdb;
+                        background-color: #494949;
+                        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+                        transition: 0.5s;
+                        border-radius: 4px;
+                        color: $light;
+
+                        &:hover {
+                            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.479) 0%, rgba(255, 255, 255, 0.226) 100%);
+
+                            .product__popup {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                .product__popup {
+                    display: none;
+                    position: absolute;
+                    z-index: 1;
+                    max-width: 248px;
+                    min-width: 200px;
+                    border-radius: 8px;
+                    left: 50%;
+                    transform: translate(-50%, -65%);
+                    background-color: $black;
+                    opacity: 0.79;
+                    top: 0;
+
+                    >div {
+                        position: relative;
+                        padding: 5px 18px 14px 18px;
+
+                        .popup__title {
+                            @extend .arial_regular_14;
+                            margin: 10px 0;
+                        }
+
+                        .popup__description {
+                            @extend .arial_regular_12;
+                        }
+
+                        .triangle {
+                            display: block;
+                            height: 0px;
+                            width: 0px;
+                            border: 10px solid transparent;
+                            border-top-color: $black;
+                            opacity: 0.79;
+                            position: absolute;
+                            bottom: -20px;
+                            left: calc(50% - 10px);
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+
+        .product__more-products {
+            margin-top: 52px;
+            text-align: center;
+
+            a {
+                @extend .arial_regular_base;
+                color: #444444;
+            }
+        }
+    }
+
+    aside {
+        flex-basis: 338px;
+        max-width: 100%;
+        height: 100%;
+
+        @include tablets {
+            margin-top: 3rem;
+        }
+
+        @include phone-only {
+            flex-basis: 100%;
+        }
+
+        .signup {
+            @include phone-only {
+                display: none;
+            }
+
+            padding: 23px 34px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+            border-radius: 3px;
+            background-color: $light-gray;
+            margin-bottom: 30px;
+
+            .signup__title {
+                @extend .oswald_light_28;
+            }
+
+            .signup__range {
+                margin-bottom: 13px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .signup__form {
+                form {
+                    input {
+                        width: 100%;
+                        margin-bottom: 9px;
+                        padding: 16px;
+                        border: 1px solid #a3a3a3;
+
+                        &::placeholder {
+                            @extend .arial_regular_14;
+                        }
+                    }
+                }
+
+                .signup__privacy-policy {
+                    margin-bottom: 13px;
+
+                    p {
+                        text-align: center;
+                        @extend .arial_regular_11;
+                    }
+                }
+
+                .signup__button-block {
+                    @include flex('', 'flex-end');
+
+                    .signup__button {
+                        padding: 10px 41px;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.17);
+                        border: 1px solid #bbb8b8;
+                        background-color: #f0f0f0;
+                        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+                        color: #949494;
+                        border-radius: 16px;
+                        @extend .arial_bold_15;
+                    }
+                }
+            }
+        }
+
+        .monitor {
+            position: relative;
+            padding: 23px 34px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+            border-radius: 3px;
+            background-color: $light-gray;
+            min-height: 328px;
+
+            .monitor__title {
+                @extend .oswald_light_28;
+                color: $gray;
+            }
+
+            .monitor__range {
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .monitor__spinner {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                text-align: center;
+                transform: translateY(-50%);
+
+                img {
+                    animation-name: loading;
+                    animation-duration: 1200ms;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                }
+
+                @keyframes loading {
+                    from {
+                        transform: rotate(0deg);
+                    }
+
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                p {
+                    margin: 8px 0 0 10px;
+                    @extend .arial_regular_16;
+                    color: #646464;
+                }
+            }
+
+            .monitor__connect {
+                position: absolute;
+                bottom: 21px;
+                right: 23px;
+
+                .monitor__button {
+                    padding: 10px 42px;
+                    border: none;
+                    background-color: #f0f0f0;
+                    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+                    color: $light-gray;
+                    border-radius: 16px;
+                    @extend .arial_bold_15;
+                }
+            }
+        }
+    }
+}

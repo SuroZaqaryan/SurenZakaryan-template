@@ -1,0 +1,41 @@
+<div class="navbar">
+    <nav class="navbar__menu-mobile">
+        <div class="navbar__menu-search">
+            <button class="navbar__btn-menu">
+                <img src="/src/assets/images/navbar/menu.svg" alt="menu">
+            </button>
+            <button class="navbar__btn-search">
+                <img src="/src/assets/images/navbar/search-mobile.svg" alt="search">
+            </button>
+        </div>
+
+        <ul>
+            <a href="#">Home</a>
+            <a href="#">Credits</a>
+            <a href="#">Exchange</a>
+            <a href="#">Partners</a>
+            <a href="#">Stock</a>
+            <a href="#">Holding</a>
+            <a href="#">About</a>
+        </ul>
+    </nav>
+
+    <nav class="navbar__menu">
+        <p class="navbar__mobile-title">ParrotWings Exchange</p>
+        <ul>
+            <a href="#">Home</a>
+            <a href="#">Credits</a>
+            <a href="#">Exchange</a>
+            <a href="#">Partners</a>
+            <a href="#">Stock</a>
+            <a href="#">Holding</a>
+            <a href="#">About</a>
+        </ul>
+    </nav>
+</div>
+
+<script>
+    $(".navbar__btn-menu").click(function () {
+        $(".navbar__menu-mobile ul").slideToggle('fast');
+    })
+</script>

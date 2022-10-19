@@ -1,0 +1,198 @@
+<main>
+    <section class="product">
+        <div class="product__title">
+            <h1>ParrotWings Exchange</h1>
+            <div class="product__search">
+                <input type="text" placeholder="Search...">
+                <img src="/src/assets/images/product/search-icon.svg" width="16" alt="search">
+            </div>
+        </div>
+
+        <div class="product__subtitle">
+            <img src="/src/assets/images/product/line.svg" alt="">
+            <p>Products</p>
+        </div>
+
+        <div class="product__products">
+            <div class="product__merchandise">
+                <div class="product__image">
+                    <img src="/src/assets/images/product/merchandise/1.png" alt="product">
+                </div>
+
+                <div class="product__info">
+                    <small>2 Props</small>
+                    <p>Ultimated Exchange</p>
+                    <button>
+                        Order
+                        <div class="product__popup"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product__merchandise">
+                <div class="product__image">
+                    <img src="/src/assets/images/product/merchandise/2.png" alt="product">
+                </div>
+
+                <div class="product__info">
+                    <small>1 Props</small>
+                    <p>International exchange</p>
+                    <button>
+                        Order
+                        <div class="product__popup"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product__merchandise">
+                <div class="product__image">
+                    <img src="/src/assets/images/product/merchandise/3.png" alt="product">
+                </div>
+
+                <div class="product__info">
+                    <small>3 Props, all</small>
+                    <p>Additional services</p>
+                    <button>
+                        Order
+                        <div class="product__popup"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product__merchandise">
+                <div class="product__image">
+                    <img src="/src/assets/images/product/merchandise/4.png" alt="product">
+                </div>
+
+                <div class="product__info">
+                    <small>5 props</small>
+                    <p>Support</p>
+                    <button>
+                        Order
+                        <div class="product__popup"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product__merchandise">
+                <div class="product__image">
+                    <img src="/src/assets/images/product/merchandise/5.png" alt="product">
+                </div>
+
+                <div class="product__info">
+                    <small>2 Props</small>
+                    <p>2 Props</p>
+                    <button>
+                        Order
+                        <div class="product__popup"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product__merchandise">
+                <div class="product__image">
+                    <img src="/src/assets/images/product/merchandise/6.png" alt="product">
+                </div>
+
+                <div class="product__info">
+                    <small>not in access</small>
+                    <p>Postal delivery</p>
+                    <button>
+                        Order
+                        <div class="product__popup"></div>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product__merchandise">
+                <div class="product__image">
+                    <img src="/src/assets/images/product/merchandise/7.png" alt="product">
+                </div>
+
+                <div class="product__info">
+                    <small>2 Props</small>
+                    <p>Document manag...</p>
+                    <button>
+                        Order
+                        <div class="product__popup"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product__merchandise">
+                <div class="product__image">
+                    <img src="/src/assets/images/product/merchandise/8.png" alt="product">
+                </div>
+
+                <div class="product__info">
+                    <small>1 Props</small>
+                    <p>Promotions</p>
+                    <button>
+                        Order
+                        <div class="product__popup"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product__more-products">
+            <a href="#">More products...</a>
+        </div>
+    </section>
+
+    <aside>
+        <div class="signup">
+            <p class="signup__title">Sign Up</p>
+
+            <div class="signup__range">
+                <img src="/src/assets/images/product/range.svg" alt="range">
+            </div>
+
+            <div class="signup__form">
+                <form action="">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                    <input type="email" placeholder="Email">
+                </form>
+
+                <div class="signup__privacy-policy">
+                    <p>
+                        By creating a PW Exchange Account you acknowledge that
+                        you have read, understood and agree to the <u>Terms of Use</u>
+                        and <u>Privacy Policy</u>.
+                    </p>
+                </div>
+
+                <div class="signup__button-block">
+                    <button class="signup__button">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="monitor">
+            <p class="monitor__title">Online Monitor</p>
+
+            <div class="monitor__range">
+                <img src="/src/assets/images/product/range.svg" alt="range">
+            </div>
+
+            <div class="monitor__spinner">
+                <img src="/src/assets/images/product/spinner.svg" alt="spinner">
+                <p>Loading...</p>
+            </div>
+
+            <div class="monitor__connect">
+                <button class="monitor__button">
+                    Connect
+                </button>
+            </div>
+        </div>
+    </aside>
+</main>
+
+<script>
+    $(".product__popup").load(`/src/components/popups/popup.html`);
+</script>

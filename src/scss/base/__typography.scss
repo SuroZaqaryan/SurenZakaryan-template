@@ -1,0 +1,73 @@
+/* Oswald Light 300 */
+
+.osw_light_base {
+    font-family: "Oswald Light";
+}
+
+.oswald_light_16 {
+    @extend .osw_light_base;
+    font-size: 16px;
+}
+
+.oswald_light_18 {
+    @extend .osw_light_base;
+    font-size: 18px;
+}
+
+.oswald_light_26 {
+    @extend .osw_light_base;
+    font-size: 26px;
+    letter-spacing: -0.65px;
+}
+
+.oswald_light_28 {
+    @extend .osw_light_base;
+    font-size: 28px;
+}
+
+.oswald_light_32 {
+    @extend .osw_light_base;
+    font-size: 32px;
+}
+
+.oswald_light_34 {
+    @extend .osw_light_base;
+    font-size: 34px;
+}
+
+/* Arial MT Regular 400 */
+
+.arial_regular_base {
+    font-family: "Arial Regular";
+}
+
+.arial_regular_16 {
+    @extend .arial_regular_base;
+    font-size: 16px;
+}
+
+.arial_regular_14 {
+    @extend .arial_regular_base;
+    font-size: 14px;
+}
+
+.arial_regular_12 {
+    @extend .arial_regular_base;
+    font-size: 12px;
+}
+
+.arial_regular_11 {
+    @extend .arial_regular_base;
+    font-size: 11px;
+}
+
+/* Arial MT Regular 700 */
+
+.arial_bold_base {
+    font-family: "Arial MT Bold";
+}
+
+.arial_bold_15 {
+    @extend .arial_bold_base;
+    font-size: 15px;
+}
